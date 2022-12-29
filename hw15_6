@@ -1,0 +1,38 @@
+package hw15_6.java;
+
+public class homework {
+
+	private int n;
+	private int sum=0;
+	public homework(int a )
+	{
+		n=a;
+	}
+	public void run()
+	{
+		 for(int i=1;i<=n;i++)
+		 {
+	         for(int j=0;j<100000000;j++);
+	         sum+=i;
+		 }
+		 System.out.println("1+2+...+"+n+"="+sum);
+	}
+	
+	}
+
+
+package hw15_6.java;
+
+public class hw6 {
+
+	public static void main(String[] args) {
+		homework a1=new homework(5);
+		homework a2 = new homework(10);
+		Thread t1=new Thread(a1);
+		Thread t2= new Thread(a2);
+		t1.start();
+		t2.start();
+
+	}
+
+}
